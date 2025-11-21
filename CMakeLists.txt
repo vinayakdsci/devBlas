@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(devBlas LANGUAGES C CXX)
+project(devBlas)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -11,7 +11,7 @@ add_subdirectory(src)
 option(DEVBLAS_BUILD_BENCH OFF)
 
 if (DEVBLAS_BUILD_BENCH)
-	add_executable(bench_driver bench_driver.cc)
+	add_executable(bench_driver bench_driver.c)
 	# target_link_libraries(bench_driver devblas)
 	target_link_libraries(bench_driver devblas)
 endif()
