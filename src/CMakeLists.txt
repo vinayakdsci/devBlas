@@ -1,6 +1,7 @@
 add_library(devblas SHARED
 	sgemm.cc
 	c_api/blas.cc
+	benchmarking/bench.cc
 )
 
 target_include_directories(devblas PUBLIC ../include/)
